@@ -47,11 +47,9 @@ class SignupNormalViewModel: ObservableObject {
                 .decode(type: NaverData.self, decoder: JSONDecoder())
                 .sink { completion in
                     print("Completion: \(completion)")
-                } receiveValue: { data in
-                    // 강한참조 문제 해결하기 위해서 약한 참조 실행
-                    print(data.response.name, data.response.email)
-                    self.naverName = data.response.name
-                    self.naverEmail = data.response.email
+                } receiveValue: { [weak self] data in
+                    self?.naverName = data.response.name
+                    self?.naverEmail = data.response.email
                 }
                 .store(in: &cancellables)
         }

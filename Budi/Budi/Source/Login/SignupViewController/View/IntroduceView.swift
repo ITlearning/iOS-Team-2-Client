@@ -29,6 +29,7 @@ class IntroduceView: UIView {
 
     @objc
     func writeAction(textField: UITextView) {
+        print("hello")
     }
 
     override init(frame: CGRect) {
@@ -80,5 +81,4 @@ extension IntroduceView: UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
-
 }
