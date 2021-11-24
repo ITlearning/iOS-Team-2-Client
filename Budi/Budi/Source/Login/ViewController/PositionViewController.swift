@@ -8,7 +8,7 @@
 import UIKit
 
 class PositionViewController: UIViewController {
-    var coordinator: LoginCoordinator?
+    weak var coordinator: LoginCoordinator?
 
     override func viewDidLayoutSubviews() {
         scrollView.updateContentView()
@@ -172,11 +172,10 @@ class PositionViewController: UIViewController {
 
     @objc
     func projectWriteAtcion() {
-        // 일단 아무것도 하지 않으니 (뷰가 안만들어진듯) dismiss
-        UIView.animate(withDuration: 0.2, animations: {
-            BackgroundView.instanceBackground.alpha = 0.0
-            AlertView.instanceAlert.alpha = 0.0
-        }, completion: nil)
+        print("이거 나오긴 하지..?")
+        guard let viewController: HistoryManagementViewController = storyboard?.instantiateViewController(
+            identifier: HistoryManagementViewController.identifier) as? HistoryManagementViewController else { return }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     private func configureAlert() {

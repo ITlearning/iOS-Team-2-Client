@@ -54,6 +54,7 @@
 		A8A6D9F9273D2D1800C84C52 /* BackButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6D9F8273D2D1800C84C52 /* BackButtonExtension.swift */; };
 		A8C7AB86274E0E2A00B6E0E7 /* String+baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB85274E0E2A00B6E0E7 /* String+baseURL.swift */; };
 		A8C7AB89274E0E6C00B6E0E7 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB88274E0E6C00B6E0E7 /* Login.swift */; };
+		A8C7AB8B274E235A00B6E0E7 /* HistoryManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */; };
 		A8CA17EB273EC267002CA2B9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA17EA273EC267002CA2B9 /* UIResponder.swift */; };
 		A8CD93322736470100299AB4 /* SignupNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93312736470100299AB4 /* SignupNormalViewController.swift */; };
 		A8CD93342736566100299AB4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93332736566100299AB4 /* ProgressView.swift */; };
@@ -140,6 +141,7 @@
 		A8A6D9F8273D2D1800C84C52 /* BackButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonExtension.swift; sourceTree = "<group>"; };
 		A8C7AB85274E0E2A00B6E0E7 /* String+baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+baseURL.swift"; sourceTree = "<group>"; };
 		A8C7AB88274E0E6C00B6E0E7 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewController.swift; sourceTree = "<group>"; };
 		A8CA17EA273EC267002CA2B9 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		A8CD93312736470100299AB4 /* SignupNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNormalViewController.swift; sourceTree = "<group>"; };
 		A8CD93332736566100299AB4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -285,10 +287,13 @@
 		A82E49DB273111050068218A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD933A273676BC00299AB4 /* SignupViewController */,
+				A85325B92747739A0073FAFB /* ViewModel */,
+				A85325B82747738E0073FAFB /* ViewController */,
+				A8CD935F27384C3400299AB4 /* Cell */,
+				A8CD93542738037C00299AB4 /* Data */,
+				A8CD93452737B92A00299AB4 /* View */,
 				A8CD93352736701500299AB4 /* ReuseViews */,
 				A82E49DE273111E50068218A /* LoginCoordinator.swift */,
-				A82E49DC273111C50068218A /* LoginSelectViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -296,9 +301,11 @@
 		A85325B82747738E0073FAFB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A82E49DC273111C50068218A /* LoginSelectViewController.swift */,
 				A8CD93312736470100299AB4 /* SignupNormalViewController.swift */,
-				A8CD93432736E82300299AB4 /* PositionViewController.swift */,
 				A8CD935B27383CB300299AB4 /* LocationSearchViewController.swift */,
+				A8CD93432736E82300299AB4 /* PositionViewController.swift */,
+				A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -329,18 +336,6 @@
 				A8A6D9F0273CCB5500C84C52 /* BackgroundView.swift */,
 			);
 			path = ReuseViews;
-			sourceTree = "<group>";
-		};
-		A8CD933A273676BC00299AB4 /* SignupViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A85325B92747739A0073FAFB /* ViewModel */,
-				A85325B82747738E0073FAFB /* ViewController */,
-				A8CD935F27384C3400299AB4 /* Cell */,
-				A8CD93542738037C00299AB4 /* Data */,
-				A8CD93452737B92A00299AB4 /* View */,
-			);
-			path = SignupViewController;
 			sourceTree = "<group>";
 		};
 		A8CD93452737B92A00299AB4 /* View */ = {
@@ -708,6 +703,7 @@
 				5EFB0A452733E36800F39A4D /* TeamSearchCell.swift in Sources */,
 				B9D66EC82714707000668490 /* MyBudiCoordinator.swift in Sources */,
 				5EFB0A4A2733EAA300F39A4D /* ChattingCell.swift in Sources */,
+				A8C7AB8B274E235A00B6E0E7 /* HistoryManagementViewController.swift in Sources */,
 				A8C7AB86274E0E2A00B6E0E7 /* String+baseURL.swift in Sources */,
 				5EA453942731775600943C94 /* HomeDetailLeaderCell.swift in Sources */,
 				B9D66EBD27146E4300668490 /* NavigationCoordinator.swift in Sources */,

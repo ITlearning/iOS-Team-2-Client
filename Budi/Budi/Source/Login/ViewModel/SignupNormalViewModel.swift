@@ -9,7 +9,6 @@ import UIKit
 import Combine
 import NaverThirdPartyLogin
 
-
 protocol ViewModel {
 
     associatedtype Action
@@ -27,7 +26,7 @@ final class SignupNormalViewModel: ViewModel {
 
     struct State {
         let naverData = CurrentValueSubject<NaverData?, Never>(nil)
-        let loginUserData = CurrentValueSubject<LoginResponse?,Never>(nil)
+        let loginUserData = CurrentValueSubject<LoginResponse?, Never>(nil)
     }
 
     let action = Action()

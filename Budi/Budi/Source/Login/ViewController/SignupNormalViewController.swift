@@ -47,9 +47,7 @@ class SignupNormalViewController: UIViewController {
     @objc
     func nextAction() {
         viewModel.pushServer()
-        let position = PositionViewController()
-        position.navigationItem.title = "회원가입"
-        navigationController?.pushViewController(position, animated: true)
+        coordinator?.showConfigurePosition()
     }
 
     private let scrollView: UIScrollView = {
@@ -65,9 +63,7 @@ class SignupNormalViewController: UIViewController {
 
     @objc
     func searchAction() {
-        let locationSearch = LocationSearchViewController()
-        locationSearch.navigationItem.title = "지역 선택"
-        navigationController?.pushViewController(locationSearch, animated: true)
+        coordinator?.showLocationSearchViewController()
         NSLayoutConstraint.deactivate(defaultConstraint)
         NSLayoutConstraint.activate(newConstraint)
         NotificationCenter.default.post(name: NSNotification.Name("ActivationNext"), object: nil, userInfo: nil)

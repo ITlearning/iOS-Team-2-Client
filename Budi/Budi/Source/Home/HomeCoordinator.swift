@@ -35,7 +35,6 @@ extension HomeCoordinator {
     func showDetail() {
         let viewController: HomeDetailViewController = storyboard.instantiateViewController(
             identifier: HomeDetailViewController.identifier)
-
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
