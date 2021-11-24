@@ -55,6 +55,8 @@
 		A8C7AB86274E0E2A00B6E0E7 /* String+baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB85274E0E2A00B6E0E7 /* String+baseURL.swift */; };
 		A8C7AB89274E0E6C00B6E0E7 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB88274E0E6C00B6E0E7 /* Login.swift */; };
 		A8C7AB8B274E235A00B6E0E7 /* HistoryManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */; };
+		A8C7AB95274EBAD000B6E0E7 /* HistoryTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C7AB94274EBACF00B6E0E7 /* HistoryTypeView.xib */; };
+		A8C7AB97274EBB0800B6E0E7 /* HistoryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB96274EBB0800B6E0E7 /* HistoryTypeView.swift */; };
 		A8CA17EB273EC267002CA2B9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA17EA273EC267002CA2B9 /* UIResponder.swift */; };
 		A8CD93322736470100299AB4 /* SignupNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93312736470100299AB4 /* SignupNormalViewController.swift */; };
 		A8CD93342736566100299AB4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93332736566100299AB4 /* ProgressView.swift */; };
@@ -142,6 +144,8 @@
 		A8C7AB85274E0E2A00B6E0E7 /* String+baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+baseURL.swift"; sourceTree = "<group>"; };
 		A8C7AB88274E0E6C00B6E0E7 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewController.swift; sourceTree = "<group>"; };
+		A8C7AB94274EBACF00B6E0E7 /* HistoryTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTypeView.xib; sourceTree = "<group>"; };
+		A8C7AB96274EBB0800B6E0E7 /* HistoryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTypeView.swift; sourceTree = "<group>"; };
 		A8CA17EA273EC267002CA2B9 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		A8CD93312736470100299AB4 /* SignupNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNormalViewController.swift; sourceTree = "<group>"; };
 		A8CD93332736566100299AB4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -334,6 +338,8 @@
 				A8CD93362736702500299AB4 /* SuccessCircleView.swift */,
 				A8CD9338273673C100299AB4 /* SpacingDarkLineView.swift */,
 				A8A6D9F0273CCB5500C84C52 /* BackgroundView.swift */,
+				A8C7AB94274EBACF00B6E0E7 /* HistoryTypeView.xib */,
+				A8C7AB96274EBB0800B6E0E7 /* HistoryTypeView.swift */,
 			);
 			path = ReuseViews;
 			sourceTree = "<group>";
@@ -588,6 +594,7 @@
 				5EA453952731775600943C94 /* HomeDetailLeaderCell.xib in Resources */,
 				5EA453992731776900943C94 /* HomeDetailStateCell.xib in Resources */,
 				5E7EFE282732E06F007817C3 /* AlertViewController.xib in Resources */,
+				A8C7AB95274EBAD000B6E0E7 /* HistoryTypeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +666,7 @@
 			files = (
 				A8CD934F2737BD4400299AB4 /* NormalPositionSelect.swift in Sources */,
 				A8CD933E2736A93500299AB4 /* SystemColor.swift in Sources */,
+				A8C7AB97274EBB0800B6E0E7 /* HistoryTypeView.swift in Sources */,
 				A8CD93402736ABD300299AB4 /* LocationSelectView.swift in Sources */,
 				B9D66ECE27147AEA00668490 /* HomeWritingViewController.swift in Sources */,
 				A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */,
