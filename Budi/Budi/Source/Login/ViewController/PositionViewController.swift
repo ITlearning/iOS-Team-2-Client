@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CombineCocoa
 
 class PositionViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
 
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         scrollView.updateContentView()
     }
 
@@ -103,6 +105,15 @@ class PositionViewController: UIViewController {
         nextButton.isEnabled = false
         self.addBackButton()
         configureLayout()
+        bindButton()
+    }
+
+    private func bindButton() {
+        AlertView.instanceAlert.doneButton.tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                self.coordinator?.showHistoryManagementViewController()
+            }
     }
 
     @objc
@@ -173,9 +184,7 @@ class PositionViewController: UIViewController {
     @objc
     func projectWriteAtcion() {
         print("이거 나오긴 하지..?")
-        guard let viewController: HistoryManagementViewController = storyboard?.instantiateViewController(
-            identifier: HistoryManagementViewController.identifier) as? HistoryManagementViewController else { return }
-        navigationController?.pushViewController(viewController, animated: true)
+        coordinator?.showHistoryManagementViewController()
     }
 
     private func configureAlert() {

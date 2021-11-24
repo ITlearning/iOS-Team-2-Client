@@ -19,7 +19,7 @@ class AlertView: UIView {
         return label
     }()
 
-    private let cancelButton: UIButton = {
+    let cancelButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 153, height: 48))
         button.setTitle("나중에 입력하기", for: .normal)
         button.setTitleColor(UIColor.init(white: 0, alpha: 0.38), for: .normal)
@@ -32,7 +32,7 @@ class AlertView: UIView {
         return button
     }()
 
-    private let doneButton: UIButton = {
+    let doneButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 153, height: 48))
         button.setTitle("지금 입력하기", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -40,7 +40,6 @@ class AlertView: UIView {
         button.backgroundColor = UIColor.budiGreen
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
-        button.addTarget(self, action: #selector(PositionViewController.projectWriteAtcion), for: .touchUpInside)
         button.addTarget(self, action: #selector(LocationSearchViewController.projectWriteAtcion), for: .touchUpInside)
         return button
     }()

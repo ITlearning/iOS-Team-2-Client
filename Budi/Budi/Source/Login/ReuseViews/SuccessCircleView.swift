@@ -29,6 +29,21 @@ class SuccessCircleView: UIView {
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        let check = UIImageView()
+        check.image = UIImage(systemName: "checkmark")
+        check.contentMode = .scaleAspectFit
+        check.tintColor = .white
+        addSubview(check)
+        check.translatesAutoresizingMaskIntoConstraints = false
+        check.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        check.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        check.widthAnchor.constraint(equalToConstant: 16).isActive = true
+        check.heightAnchor.constraint(equalToConstant: 16).isActive = true
+
+        backgroundColor = UIColor.budiGreen
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.budiGreen.cgColor
+        layer.cornerRadius = 14
     }
 }

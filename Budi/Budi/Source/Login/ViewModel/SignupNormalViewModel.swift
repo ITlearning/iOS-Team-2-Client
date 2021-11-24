@@ -90,8 +90,8 @@ final class SignupNormalViewModel: ViewModel {
     }
 
     func pushServer() {
-        guard let id = state.naverData.value?.id else { return }
-        let loginData = Login(loginId: id, name: state.naverData.value?.name, email: state.naverData.value?.email)
+        guard let userId = state.naverData.value?.id else { return }
+        let loginData = Login(loginId: userId, name: state.naverData.value?.name, email: state.naverData.value?.email)
         guard let uploadData = try? JSONEncoder().encode(loginData) else { return }
 
         guard let url = URL(string: .baseURLString+"/auth/login") else { return }
@@ -99,8 +99,7 @@ final class SignupNormalViewModel: ViewModel {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         action.fetch
-            .sink(receiveValue: { [weak self] _ in
-                guard let self = self else { return }
+            .sink(receiveValue: { _ in
                 URLSession.shared.uploadTask(with: request, from: uploadData) { (data, response, error) in
                     if let error = error {
                         NSLog("Error:\(error.localizedDescription)")

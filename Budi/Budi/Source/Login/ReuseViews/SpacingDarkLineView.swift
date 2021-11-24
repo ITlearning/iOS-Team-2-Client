@@ -8,17 +8,16 @@
 import UIKit
 
 class SpacingDarkLineView: UIView {
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureLayout()
+        self.backgroundColor = .black
+        self.alpha = 0.04
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    private func configureLayout() {
-        backgroundColor = .black
-        alpha = 0.04
+        super.init(coder: coder)
+        self.backgroundColor = UIColor.black
+        self.alpha = 0.04
     }
 }

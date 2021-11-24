@@ -8,11 +8,17 @@
 import UIKit
 
 class HistoryManagementViewController: UIViewController {
+    weak var coordinator: LoginCoordinator?
+
+    @IBOutlet weak var blackLineView: UIView!
+    @IBOutlet weak var progressView: ProgressView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureLayout()
     }
 
-
+    private func configureLayout() {
+        progressView.changeColor(index: 3)
+    }
 }

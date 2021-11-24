@@ -15,6 +15,7 @@ class SignupNormalViewController: UIViewController {
     private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         scrollView.updateContentView()
     }
 
@@ -47,7 +48,7 @@ class SignupNormalViewController: UIViewController {
     @objc
     func nextAction() {
         viewModel.pushServer()
-        coordinator?.showConfigurePosition()
+        coordinator?.showPositionViewController()
     }
 
     private let scrollView: UIScrollView = {
