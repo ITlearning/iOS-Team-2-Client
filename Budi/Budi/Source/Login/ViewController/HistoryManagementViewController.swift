@@ -6,19 +6,37 @@
 //
 
 import UIKit
-
+import CombineCocoa
+import Combine
 class HistoryManagementViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
+    private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet weak var blackLineView: UIView!
     @IBOutlet weak var progressView: ProgressView!
     @IBOutlet weak var projectListView: HistoryTypeView!
     @IBOutlet weak var portfolioView: HistoryTypeView!
+    @IBOutlet weak var nextButton: UIButton!
+
+    @IBOutlet weak var addWorkHistoryButton: UIButton!
+    @IBOutlet weak var addProjectListButton: UIButton!
+    @IBOutlet weak var addPortfolioButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBackButton()
         configureLayout()
+        setBindButton()
+        nextButton.isEnabled = false
+    }
+
+    private func setBindButton() {
+        addWorkHistoryButton.tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink {    
+                self.coordinator?.showHistoryWriteViewController()
+            }
+            .store(in: &cancellables)
     }
 
     private func configureLayout() {

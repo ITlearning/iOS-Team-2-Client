@@ -54,4 +54,11 @@ extension LoginCoordinator {
         viewController.coordinator = self
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    func showHistoryWriteViewController() {
+        let viewController: HistoryWriteViewController = storyboard.instantiateViewController(identifier: HistoryWriteViewController.identifier)
+        viewController.navigationItem.title = "경력작성"
+        viewController.coordinator = self
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
