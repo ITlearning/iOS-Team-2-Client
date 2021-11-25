@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Combine
 import CombineCocoa
 
 class PositionViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
-
+    private var cancellables = Set<AnyCancellable>()
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.updateContentView()
@@ -114,6 +115,7 @@ class PositionViewController: UIViewController {
             .sink { _ in
                 self.coordinator?.showHistoryManagementViewController()
             }
+            .store(in: &cancellables)
     }
 
     @objc
@@ -184,7 +186,6 @@ class PositionViewController: UIViewController {
     @objc
     func projectWriteAtcion() {
         print("이거 나오긴 하지..?")
-        coordinator?.showHistoryManagementViewController()
     }
 
     private func configureAlert() {

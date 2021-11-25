@@ -10,53 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryTypeView" customModule="Budi" customModuleProvider="target">
+            <connections>
+                <outlet property="historyTextLabel" destination="fGg-0k-IUK" id="W0K-Zb-uRa"/>
+                <outlet property="plusButton" destination="9TY-jq-n5j" id="gT0-t3-WUm"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HistoryTypeView" customModule="Budi" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGg-0k-IUK">
-                    <rect key="frame" x="16" y="20" width="30" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.38" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(선택)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX8-h8-OK5">
-                    <rect key="frame" x="50" y="19.5" width="43.5" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-jq-n5j">
-                    <rect key="frame" x="335" y="18" width="24" height="24"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdD-R5-Gve">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGg-0k-IUK">
+                            <rect key="frame" x="16" y="20" width="30" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.38" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(선택)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX8-h8-OK5">
+                            <rect key="frame" x="56" y="19" width="43.5" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TY-jq-n5j">
+                            <rect key="frame" x="335" y="20" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="1fz-av-aBH"/>
+                                <constraint firstAttribute="height" constant="24" id="wAS-tG-kh7"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
+                                <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="24" id="1fz-av-aBH"/>
-                        <constraint firstAttribute="height" constant="24" id="wAS-tG-kh7"/>
+                        <constraint firstItem="fGg-0k-IUK" firstAttribute="leading" secondItem="pdD-R5-Gve" secondAttribute="leading" constant="16" id="0Xd-05-8cB"/>
+                        <constraint firstItem="9TY-jq-n5j" firstAttribute="top" secondItem="pdD-R5-Gve" secondAttribute="top" constant="20" id="7qf-fY-ckx"/>
+                        <constraint firstAttribute="trailing" secondItem="9TY-jq-n5j" secondAttribute="trailing" constant="16" id="Fhb-eq-LCM"/>
+                        <constraint firstItem="fGg-0k-IUK" firstAttribute="top" secondItem="pdD-R5-Gve" secondAttribute="top" constant="20" id="Lws-Ld-1wT"/>
+                        <constraint firstItem="bX8-h8-OK5" firstAttribute="leading" secondItem="fGg-0k-IUK" secondAttribute="trailing" constant="10" id="M6b-aP-muQ"/>
+                        <constraint firstItem="bX8-h8-OK5" firstAttribute="top" secondItem="pdD-R5-Gve" secondAttribute="top" constant="19" id="r3j-yN-BOT"/>
                     </constraints>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Button" image="plus" catalog="system"/>
-                    <buttonConfiguration key="configuration" style="plain">
-                        <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
-                        <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fGg-0k-IUK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Gwj-FM-PON"/>
-                <constraint firstItem="9TY-jq-n5j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="bho-NN-BD8"/>
-                <constraint firstItem="bX8-h8-OK5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19.5" id="cSN-Go-Ut4"/>
-                <constraint firstItem="fGg-0k-IUK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="fnL-Jn-jzj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9TY-jq-n5j" secondAttribute="trailing" constant="16" id="gxP-oc-d2U"/>
-                <constraint firstItem="bX8-h8-OK5" firstAttribute="leading" secondItem="fGg-0k-IUK" secondAttribute="trailing" constant="4" id="su8-nF-7lx"/>
+                <constraint firstItem="pdD-R5-Gve" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="14u-yz-nlZ"/>
+                <constraint firstItem="pdD-R5-Gve" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6Rb-xC-Imd"/>
+                <constraint firstItem="pdD-R5-Gve" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="L9H-sb-vpq"/>
+                <constraint firstItem="pdD-R5-Gve" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nMp-Gu-MXZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="plusButton" destination="9TY-jq-n5j" id="YP9-Yz-KBo"/>
-            </connections>
-            <point key="canvasLocation" x="174.63768115942031" y="335.49107142857139"/>
+            <point key="canvasLocation" x="174.63768115942031" y="334.82142857142856"/>
         </view>
     </objects>
     <resources>

@@ -10,7 +10,7 @@ import UIKit
 class LocationSearchViewController: UIViewController {
     private let allLocation = Location().location
     private var correct: [String] = []
-
+    weak var coordinator: LoginCoordinator?
     private let searchBar: UISearchBar = {
         let search = UISearchBar()
         search.placeholder = "도로명으로 검색"

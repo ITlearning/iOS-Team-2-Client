@@ -36,18 +36,21 @@ extension LoginCoordinator {
     func showHistoryManagementViewController() {
         let viewController: HistoryManagementViewController = storyboard.instantiateViewController(
             identifier: HistoryManagementViewController.identifier)
-        //viewController.navigationItem.title = "회원가입"
+        viewController.navigationItem.title = "회원가입"
         viewController.coordinator = self
         navigationController?.pushViewController(viewController, animated: true)
     }
 
     func showLocationSearchViewController() {
         let viewController: LocationSearchViewController = storyboard.instantiateViewController(identifier: LocationSearchViewController.identifier)
+        viewController.navigationItem.title = "위치선택"
+        viewController.coordinator = self
         navigationController?.pushViewController(viewController, animated: true)
     }
 
     func showPositionViewController() {
         let viewController: PositionViewController = storyboard.instantiateViewController(identifier: PositionViewController.identifier)
+        viewController.navigationItem.title = "회원가입"
         viewController.coordinator = self
         navigationController?.pushViewController(viewController, animated: true)
     }
