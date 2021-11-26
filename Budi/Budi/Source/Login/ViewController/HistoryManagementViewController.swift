@@ -49,10 +49,6 @@ class HistoryManagementViewController: UIViewController {
     }
 
     private func configureLayout() {
-        addWorkHistoryButton.tag = 1
-        addProjectListButton.tag = 2
-        addPortfolioButton.tag = 3
-
         progressView.changeColor(index: 3)
         projectListView.configureTextLabel("프로젝트 이력")
         portfolioView.configureTextLabel("포트폴리오")

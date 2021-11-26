@@ -75,25 +75,6 @@ class HistoryDateWriteView: UIView {
     func checkButtonRemove() {
         workingCheckButton.removeFromSuperview()
         self.layoutIfNeeded()
-//        leftTextField.translatesAutoresizingMaskIntoConstraints = false
-//        midTextLabel.translatesAutoresizingMaskIntoConstraints = false
-//        rightTextField.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            leftTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
-//            leftTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
-//        ])
-//
-//        NSLayoutConstraint.activate([
-//            rightTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
-//            rightTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
-//        ])
-//
-//        NSLayoutConstraint.activate([
-//            midTextLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
-//            midTextLabel.leadingAnchor.constraint(equalTo: leftTextField.trailingAnchor, constant: 8),
-//            midTextLabel.trailingAnchor.constraint(equalTo: rightTextField.leadingAnchor, constant: -8)
-//        ])
-
     }
 
     private func initialize() {

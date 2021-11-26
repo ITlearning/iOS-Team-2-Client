@@ -31,9 +31,7 @@ final class HistoryManagementViewModel: ViewModel {
     private func configure() {
         action.tag
             .sink { tag in
-                print("여기서 받아옴", tag)
                 self.state.selectIndex.send(tag)
-                print("보냄", tag)
             }
             .store(in: &cancellables)
     }
