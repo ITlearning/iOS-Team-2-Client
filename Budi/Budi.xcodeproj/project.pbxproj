@@ -48,6 +48,7 @@
 		7C2060A1B418A53F47747CDA /* Pods_Budi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D20131AEAD19181CEF5CF7C /* Pods_Budi.framework */; };
 		A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DC273111C50068218A /* LoginSelectViewController.swift */; };
 		A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DE273111E50068218A /* LoginCoordinator.swift */; };
+		A846C2562750A3E10075463B /* HistoryManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */; };
 		A85301CF274F98B60050FF1C /* HistoryWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85301CE274F98B60050FF1C /* HistoryWriteViewController.swift */; };
 		A85301D1274F99020050FF1C /* HistorySingleWriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */; };
 		A85301D3274F993C0050FF1C /* HistorySingleWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85301D2274F993C0050FF1C /* HistorySingleWriteView.swift */; };
@@ -142,6 +143,7 @@
 		84D727CBB17AD63DD79D7083 /* Pods-Budi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budi.release.xcconfig"; path = "Target Support Files/Pods-Budi/Pods-Budi.release.xcconfig"; sourceTree = "<group>"; };
 		A82E49DC273111C50068218A /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		A82E49DE273111E50068218A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewModel.swift; sourceTree = "<group>"; };
 		A85301CE274F98B60050FF1C /* HistoryWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWriteViewController.swift; sourceTree = "<group>"; };
 		A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistorySingleWriteView.xib; sourceTree = "<group>"; };
 		A85301D2274F993C0050FF1C /* HistorySingleWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySingleWriteView.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				A85325BA274773F90073FAFB /* SignupNormalViewModel.swift */,
+				A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				B9D66EBF27146F2F00668490 /* HomeCoordinator.swift in Sources */,
 				5EFB0A4F2733FDD100F39A4D /* ChattingDetailViewController.swift in Sources */,
 				5EA453692731412A00943C94 /* HomeCell.swift in Sources */,
+				A846C2562750A3E10075463B /* HistoryManagementViewModel.swift in Sources */,
 				A8C7AB89274E0E6C00B6E0E7 /* Login.swift in Sources */,
 				5EFB0A452733E36800F39A4D /* TeamSearchCell.swift in Sources */,
 				B9D66EC82714707000668490 /* MyBudiCoordinator.swift in Sources */,

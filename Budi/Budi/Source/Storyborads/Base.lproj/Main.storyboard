@@ -602,8 +602,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="companyNameTypingView" destination="oGK-ep-QwH" id="hWM-jv-y6x"/>
-                        <outlet property="partNameTypingView" destination="Ove-Dt-goA" id="sTF-Wk-SII"/>
+                        <outlet property="datePickerView" destination="6Mi-ZA-xWm" id="TkS-9q-D8S"/>
+                        <outlet property="firstTypingView" destination="oGK-ep-QwH" id="hWM-jv-y6x"/>
+                        <outlet property="secondTypingView" destination="Ove-Dt-goA" id="sTF-Wk-SII"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcc-dY-zF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

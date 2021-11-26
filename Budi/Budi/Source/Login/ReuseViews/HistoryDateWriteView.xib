@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryDateWriteView" customModule="Budi" customModuleProvider="target">
             <connections>
                 <outlet property="leftTextField" destination="Izn-tn-bqj" id="uwE-TX-Dyl"/>
+                <outlet property="midTextLabel" destination="jBe-lB-Bwt" id="5JC-Jm-L2c"/>
                 <outlet property="rightTextField" destination="ZzJ-HC-nov" id="sO4-o1-oqe"/>
                 <outlet property="workingCheckButton" destination="Vg3-j4-GMs" id="Fcj-bU-4l9"/>
             </connections>
@@ -68,11 +69,11 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="LQ0-Bz-HNn" firstAttribute="top" secondItem="Kyh-V9-yBg" secondAttribute="top" constant="20" id="53U-ay-mV4"/>
-                        <constraint firstItem="Izn-tn-bqj" firstAttribute="top" secondItem="Kyh-V9-yBg" secondAttribute="top" constant="80" id="5gJ-D9-Hno"/>
                         <constraint firstItem="Vg3-j4-GMs" firstAttribute="leading" secondItem="Kyh-V9-yBg" secondAttribute="leading" constant="14" id="79v-HN-N7X"/>
                         <constraint firstItem="jBe-lB-Bwt" firstAttribute="leading" secondItem="Izn-tn-bqj" secondAttribute="trailing" constant="8" id="BUk-sb-Vff"/>
                         <constraint firstItem="LQ0-Bz-HNn" firstAttribute="leading" secondItem="Kyh-V9-yBg" secondAttribute="leading" constant="16" id="Jgc-BI-w03"/>
                         <constraint firstItem="ZzJ-HC-nov" firstAttribute="top" secondItem="Kyh-V9-yBg" secondAttribute="top" constant="80" id="MfY-JR-teL"/>
+                        <constraint firstItem="Izn-tn-bqj" firstAttribute="top" secondItem="Kyh-V9-yBg" secondAttribute="top" constant="80" id="Mw4-5P-7CB"/>
                         <constraint firstItem="ZzJ-HC-nov" firstAttribute="leading" secondItem="jBe-lB-Bwt" secondAttribute="trailing" constant="8" id="au0-pV-9Dk"/>
                         <constraint firstAttribute="trailing" secondItem="Vg3-j4-GMs" secondAttribute="trailing" constant="280" id="dSC-2s-70V"/>
                         <constraint firstItem="Izn-tn-bqj" firstAttribute="leading" secondItem="Kyh-V9-yBg" secondAttribute="leading" constant="16" id="iv4-MB-YlG"/>

@@ -15,6 +15,7 @@ class HistoryDateWriteView: UIView {
     @IBOutlet weak var leftTextField: UITextField!
     @IBOutlet weak var rightTextField: UITextField!
     @IBOutlet weak var workingCheckButton: UIButton!
+    @IBOutlet weak var midTextLabel: UILabel!
 
     private var leftDatePicker = UIDatePicker()
     private var rightDatePicker = UIDatePicker()
@@ -69,6 +70,30 @@ class HistoryDateWriteView: UIView {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년MM월dd일"
         return formatter.string(from: date)
+    }
+
+    func checkButtonRemove() {
+        workingCheckButton.removeFromSuperview()
+        self.layoutIfNeeded()
+//        leftTextField.translatesAutoresizingMaskIntoConstraints = false
+//        midTextLabel.translatesAutoresizingMaskIntoConstraints = false
+//        rightTextField.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            leftTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+//            leftTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
+//        ])
+//
+//        NSLayoutConstraint.activate([
+//            rightTextField.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+//            rightTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
+//        ])
+//
+//        NSLayoutConstraint.activate([
+//            midTextLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
+//            midTextLabel.leadingAnchor.constraint(equalTo: leftTextField.trailingAnchor, constant: 8),
+//            midTextLabel.trailingAnchor.constraint(equalTo: rightTextField.leadingAnchor, constant: -8)
+//        ])
+
     }
 
     private func initialize() {

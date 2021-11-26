@@ -10,6 +10,8 @@ import CombineCocoa
 import Combine
 class HistoryManagementViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
+    private let viewModel = HistoryManagementViewModel()
+
     private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet weak var blackLineView: UIView!
@@ -33,13 +35,24 @@ class HistoryManagementViewController: UIViewController {
     private func setBindButton() {
         addWorkHistoryButton.tapPublisher
             .receive(on: DispatchQueue.main)
-            .sink {    
-                self.coordinator?.showHistoryWriteViewController()
+            .sink {
+                self.coordinator?.showHistoryWriteViewController(1)
+            }
+            .store(in: &cancellables)
+
+        addProjectListButton.tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink {
+                self.coordinator?.showHistoryWriteViewController(2)
             }
             .store(in: &cancellables)
     }
 
     private func configureLayout() {
+        addWorkHistoryButton.tag = 1
+        addProjectListButton.tag = 2
+        addPortfolioButton.tag = 3
+
         progressView.changeColor(index: 3)
         projectListView.configureTextLabel("프로젝트 이력")
         portfolioView.configureTextLabel("포트폴리오")
