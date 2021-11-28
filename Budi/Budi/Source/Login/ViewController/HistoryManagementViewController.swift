@@ -10,25 +10,39 @@ import CombineCocoa
 import Combine
 class HistoryManagementViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
-    private let viewModel = HistoryManagementViewModel()
+    private let viewModel: HistoryManagementViewModel
 
     private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet weak var blackLineView: UIView!
-    @IBOutlet weak var progressView: ProgressView!
     @IBOutlet weak var projectListView: HistoryTypeView!
     @IBOutlet weak var portfolioView: HistoryTypeView!
     @IBOutlet weak var nextButton: UIButton!
 
+    @IBOutlet weak var progressView: ProgressView!
+    @IBOutlet weak var linkAdd: HistoryAddButtonView!
     @IBOutlet weak var addWorkHistoryButton: UIButton!
     @IBOutlet weak var addProjectListButton: UIButton!
     @IBOutlet weak var addPortfolioButton: UIButton!
+
+    @IBOutlet weak var workHistoryResultView: HistoryResultView!
+
+    init?(coder: NSCoder, viewModel: HistoryManagementViewModel) {
+        self.viewModel = viewModel
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("This viewController must be init with viewModel")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBackButton()
         configureLayout()
         setBindButton()
+        bindViewModel()
+        workHistoryResultView.isHidden = true
         nextButton.isEnabled = false
     }
 
@@ -48,9 +62,18 @@ class HistoryManagementViewController: UIViewController {
             .store(in: &cancellables)
     }
 
+    private func bindViewModel() {
+        viewModel.action.title
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] data in
+                print(data)
+            }
+            .store(in: &cancellables)
+    }
+
     private func configureLayout() {
         progressView.changeColor(index: 3)
-        projectListView.configureTextLabel("프로젝트 이력")
-        portfolioView.configureTextLabel("포트폴리오")
+        
     }
 }
+

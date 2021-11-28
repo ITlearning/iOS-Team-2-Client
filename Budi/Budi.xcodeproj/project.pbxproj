@@ -48,6 +48,12 @@
 		7C2060A1B418A53F47747CDA /* Pods_Budi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D20131AEAD19181CEF5CF7C /* Pods_Budi.framework */; };
 		A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DC273111C50068218A /* LoginSelectViewController.swift */; };
 		A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DE273111E50068218A /* LoginCoordinator.swift */; };
+		A833C1232751EA190044639D /* HistoryResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A833C1222751EA190044639D /* HistoryResultView.xib */; };
+		A833C1252751EA460044639D /* HistoryResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C1242751EA460044639D /* HistoryResultView.swift */; };
+		A833C127275388530044639D /* HistoryAddButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A833C126275388530044639D /* HistoryAddButtonView.xib */; };
+		A833C129275388870044639D /* HistoryAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C128275388870044639D /* HistoryAddButtonView.swift */; };
+		A833C12C2753C1E20044639D /* WorkHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C12B2753C1E20044639D /* WorkHistory.swift */; };
+		A833C12E2753C2780044639D /* ProjectHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C12D2753C2780044639D /* ProjectHistory.swift */; };
 		A846C2562750A3E10075463B /* HistoryManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */; };
 		A85301CF274F98B60050FF1C /* HistoryWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85301CE274F98B60050FF1C /* HistoryWriteViewController.swift */; };
 		A85301D1274F99020050FF1C /* HistorySingleWriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */; };
@@ -143,6 +149,12 @@
 		84D727CBB17AD63DD79D7083 /* Pods-Budi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budi.release.xcconfig"; path = "Target Support Files/Pods-Budi/Pods-Budi.release.xcconfig"; sourceTree = "<group>"; };
 		A82E49DC273111C50068218A /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		A82E49DE273111E50068218A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		A833C1222751EA190044639D /* HistoryResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryResultView.xib; sourceTree = "<group>"; };
+		A833C1242751EA460044639D /* HistoryResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultView.swift; sourceTree = "<group>"; };
+		A833C126275388530044639D /* HistoryAddButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryAddButtonView.xib; sourceTree = "<group>"; };
+		A833C128275388870044639D /* HistoryAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAddButtonView.swift; sourceTree = "<group>"; };
+		A833C12B2753C1E20044639D /* WorkHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHistory.swift; sourceTree = "<group>"; };
+		A833C12D2753C2780044639D /* ProjectHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHistory.swift; sourceTree = "<group>"; };
 		A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewModel.swift; sourceTree = "<group>"; };
 		A85301CE274F98B60050FF1C /* HistoryWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWriteViewController.swift; sourceTree = "<group>"; };
 		A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistorySingleWriteView.xib; sourceTree = "<group>"; };
@@ -340,6 +352,8 @@
 			isa = PBXGroup;
 			children = (
 				A8C7AB88274E0E6C00B6E0E7 /* Login.swift */,
+				A833C12B2753C1E20044639D /* WorkHistory.swift */,
+				A833C12D2753C2780044639D /* ProjectHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +372,10 @@
 				A85301D2274F993C0050FF1C /* HistorySingleWriteView.swift */,
 				A85301D4274FA02E0050FF1C /* HistoryDateWriteView.xib */,
 				A85301D6274FA03E0050FF1C /* HistoryDateWriteView.swift */,
+				A833C1222751EA190044639D /* HistoryResultView.xib */,
+				A833C1242751EA460044639D /* HistoryResultView.swift */,
+				A833C126275388530044639D /* HistoryAddButtonView.xib */,
+				A833C128275388870044639D /* HistoryAddButtonView.swift */,
 			);
 			path = ReuseViews;
 			sourceTree = "<group>";
@@ -600,6 +618,7 @@
 				5EA453A12731778000943C94 /* HomeDetailMainCell.xib in Resources */,
 				5EA4539D2731777500943C94 /* HomeDetailIntroCell.xib in Resources */,
 				B9BF788027004096000BE0EF /* LaunchScreen.storyboard in Resources */,
+				A833C127275388530044639D /* HistoryAddButtonView.xib in Resources */,
 				5EA4536A2731412A00943C94 /* HomeCell.xib in Resources */,
 				B9BF787D27004096000BE0EF /* Assets.xcassets in Resources */,
 				5EFB0A532734016600F39A4D /* MyChattingMessageCell.xib in Resources */,
@@ -610,6 +629,7 @@
 				5EA453912731774100943C94 /* HomeDetailMemberCell.xib in Resources */,
 				5EFB0A4B2733EAA300F39A4D /* ChattingCell.xib in Resources */,
 				B9BF787B27004095000BE0EF /* Main.storyboard in Resources */,
+				A833C1232751EA190044639D /* HistoryResultView.xib in Resources */,
 				5EA453952731775600943C94 /* HomeDetailLeaderCell.xib in Resources */,
 				5EA453992731776900943C94 /* HomeDetailStateCell.xib in Resources */,
 				5E7EFE282732E06F007817C3 /* AlertViewController.xib in Resources */,
@@ -684,6 +704,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A833C1252751EA460044639D /* HistoryResultView.swift in Sources */,
 				A8CD934F2737BD4400299AB4 /* NormalPositionSelect.swift in Sources */,
 				A8CD933E2736A93500299AB4 /* SystemColor.swift in Sources */,
 				A8C7AB97274EBB0800B6E0E7 /* HistoryTypeView.swift in Sources */,
@@ -693,6 +714,7 @@
 				A8CD93472737B9AB00299AB4 /* NormalPositionView.swift in Sources */,
 				A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */,
 				B9D66ECC2714716400668490 /* HomeViewController.swift in Sources */,
+				A833C129275388870044639D /* HistoryAddButtonView.swift in Sources */,
 				A8CD9339273673C100299AB4 /* SpacingDarkLineView.swift in Sources */,
 				A8CA17EB273EC267002CA2B9 /* UIResponder.swift in Sources */,
 				A8CD936127384C4900299AB4 /* SearchTableViewCell.swift in Sources */,
@@ -731,10 +753,12 @@
 				5EA453692731412A00943C94 /* HomeCell.swift in Sources */,
 				A846C2562750A3E10075463B /* HistoryManagementViewModel.swift in Sources */,
 				A8C7AB89274E0E6C00B6E0E7 /* Login.swift in Sources */,
+				A833C12C2753C1E20044639D /* WorkHistory.swift in Sources */,
 				5EFB0A452733E36800F39A4D /* TeamSearchCell.swift in Sources */,
 				B9D66EC82714707000668490 /* MyBudiCoordinator.swift in Sources */,
 				5EFB0A4A2733EAA300F39A4D /* ChattingCell.swift in Sources */,
 				A8C7AB8B274E235A00B6E0E7 /* HistoryManagementViewController.swift in Sources */,
+				A833C12E2753C2780044639D /* ProjectHistory.swift in Sources */,
 				A8C7AB86274E0E2A00B6E0E7 /* String+baseURL.swift in Sources */,
 				5EA453942731775600943C94 /* HomeDetailLeaderCell.swift in Sources */,
 				B9D66EBD27146E4300668490 /* NavigationCoordinator.swift in Sources */,

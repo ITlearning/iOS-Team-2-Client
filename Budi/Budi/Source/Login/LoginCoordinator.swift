@@ -8,7 +8,7 @@
 import UIKit
 
 final class LoginCoordinator: NavigationCoordinator {
-
+    private let historyViewModel = HistoryManagementViewModel()
     weak var navigationController: UINavigationController?
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -34,8 +34,9 @@ extension LoginCoordinator {
     }
 
     func showHistoryManagementViewController() {
-        let viewController: HistoryManagementViewController = storyboard.instantiateViewController(
-            identifier: HistoryManagementViewController.identifier)
+        let viewController: HistoryManagementViewController = storyboard.instantiateViewController(identifier: HistoryManagementViewController.identifier) { coder -> HistoryManagementViewController? in
+            return HistoryManagementViewController(coder: coder, viewModel: self.historyViewModel)
+        }
         viewController.navigationItem.title = "회원가입"
         viewController.coordinator = self
         navigationController?.pushViewController(viewController, animated: true)
@@ -56,7 +57,9 @@ extension LoginCoordinator {
     }
 
     func showHistoryWriteViewController(_ number: Int) {
-        let viewController: HistoryWriteViewController = storyboard.instantiateViewController(identifier: HistoryWriteViewController.identifier)
+        let viewController: HistoryWriteViewController = storyboard.instantiateViewController(identifier: HistoryWriteViewController.identifier) { coder -> HistoryWriteViewController? in
+            return HistoryWriteViewController(coder: coder, viewModel: self.historyViewModel)
+        }
         if number == 1 {
             viewController.navigationItem.title = "경력 작성"
             viewController.viewModel.action.tag.send(1)

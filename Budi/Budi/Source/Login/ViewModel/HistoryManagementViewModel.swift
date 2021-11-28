@@ -10,14 +10,19 @@ import Combine
 import CombineCocoa
 
 final class HistoryManagementViewModel: ViewModel {
-
+    typealias ResultCharacters = Result<[String], Error>
     var cancellables = Set<AnyCancellable>()
+    var workHistory: [WorkHistory] = []
+    var projectHistory: [ProjectHistory] = []
+    var portFolioLink: [String] = []
 
     struct Action {
         var tag = PassthroughSubject<Int, Never>()
+        var title = PassthroughSubject<[String], Never>()
     }
 
     struct State {
+        var titleAppend = CurrentValueSubject<Void, Never>(())
         var selectIndex = CurrentValueSubject<Int, Never>(1)
     }
 
@@ -34,5 +39,17 @@ final class HistoryManagementViewModel: ViewModel {
                 self.state.selectIndex.send(tag)
             }
             .store(in: &cancellables)
+    }
+
+    func addCompany(_ history: WorkHistory) {
+        workHistory.append(history)
+    }
+
+    func addProject(_ history: ProjectHistory) {
+        projectHistory.append(history)
+    }
+
+    func addPortFolio(_ link: String) {
+        portFolioLink.append(link)
     }
 }
