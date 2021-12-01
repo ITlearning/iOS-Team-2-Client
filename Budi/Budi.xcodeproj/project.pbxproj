@@ -46,6 +46,9 @@
 		5EFB0A5A27341C1100F39A4D /* ChattingTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB0A5827341C1100F39A4D /* ChattingTimeCell.swift */; };
 		5EFB0A5B27341C1100F39A4D /* ChattingTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB0A5927341C1100F39A4D /* ChattingTimeCell.xib */; };
 		7C2060A1B418A53F47747CDA /* Pods_Budi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D20131AEAD19181CEF5CF7C /* Pods_Budi.framework */; };
+		A81ED617275730A700737F3E /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81ED615275730A700737F3E /* DefaultTableViewCell.swift */; };
+		A81ED61A27575E5500737F3E /* DefaultHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81ED61927575E5500737F3E /* DefaultHeaderView.swift */; };
+		A81ED61C27575E6200737F3E /* DefaultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A81ED61B27575E6200737F3E /* DefaultHeaderView.xib */; };
 		A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DC273111C50068218A /* LoginSelectViewController.swift */; };
 		A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DE273111E50068218A /* LoginCoordinator.swift */; };
 		A833C1232751EA190044639D /* HistoryResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A833C1222751EA190044639D /* HistoryResultView.xib */; };
@@ -54,6 +57,8 @@
 		A833C129275388870044639D /* HistoryAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C128275388870044639D /* HistoryAddButtonView.swift */; };
 		A833C12C2753C1E20044639D /* WorkHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C12B2753C1E20044639D /* WorkHistory.swift */; };
 		A833C12E2753C2780044639D /* ProjectHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C12D2753C2780044639D /* ProjectHistory.swift */; };
+		A833C1432753E2F90044639D /* HistoryButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833C1412753E2F90044639D /* HistoryButtonTableViewCell.swift */; };
+		A833C1442753E2F90044639D /* HistoryButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A833C1422753E2F90044639D /* HistoryButtonTableViewCell.xib */; };
 		A846C2562750A3E10075463B /* HistoryManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */; };
 		A85301CF274F98B60050FF1C /* HistoryWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85301CE274F98B60050FF1C /* HistoryWriteViewController.swift */; };
 		A85301D1274F99020050FF1C /* HistorySingleWriteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */; };
@@ -67,8 +72,6 @@
 		A8C7AB86274E0E2A00B6E0E7 /* String+baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB85274E0E2A00B6E0E7 /* String+baseURL.swift */; };
 		A8C7AB89274E0E6C00B6E0E7 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB88274E0E6C00B6E0E7 /* Login.swift */; };
 		A8C7AB8B274E235A00B6E0E7 /* HistoryManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */; };
-		A8C7AB95274EBAD000B6E0E7 /* HistoryTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8C7AB94274EBACF00B6E0E7 /* HistoryTypeView.xib */; };
-		A8C7AB97274EBB0800B6E0E7 /* HistoryTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7AB96274EBB0800B6E0E7 /* HistoryTypeView.swift */; };
 		A8CA17EB273EC267002CA2B9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA17EA273EC267002CA2B9 /* UIResponder.swift */; };
 		A8CD93322736470100299AB4 /* SignupNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93312736470100299AB4 /* SignupNormalViewController.swift */; };
 		A8CD93342736566100299AB4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93332736566100299AB4 /* ProgressView.swift */; };
@@ -147,6 +150,9 @@
 		5EFB0A5827341C1100F39A4D /* ChattingTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingTimeCell.swift; sourceTree = "<group>"; };
 		5EFB0A5927341C1100F39A4D /* ChattingTimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingTimeCell.xib; sourceTree = "<group>"; };
 		84D727CBB17AD63DD79D7083 /* Pods-Budi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budi.release.xcconfig"; path = "Target Support Files/Pods-Budi/Pods-Budi.release.xcconfig"; sourceTree = "<group>"; };
+		A81ED615275730A700737F3E /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		A81ED61927575E5500737F3E /* DefaultHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHeaderView.swift; sourceTree = "<group>"; };
+		A81ED61B27575E6200737F3E /* DefaultHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultHeaderView.xib; sourceTree = "<group>"; };
 		A82E49DC273111C50068218A /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		A82E49DE273111E50068218A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A833C1222751EA190044639D /* HistoryResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryResultView.xib; sourceTree = "<group>"; };
@@ -155,6 +161,8 @@
 		A833C128275388870044639D /* HistoryAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAddButtonView.swift; sourceTree = "<group>"; };
 		A833C12B2753C1E20044639D /* WorkHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHistory.swift; sourceTree = "<group>"; };
 		A833C12D2753C2780044639D /* ProjectHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHistory.swift; sourceTree = "<group>"; };
+		A833C1412753E2F90044639D /* HistoryButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryButtonTableViewCell.swift; sourceTree = "<group>"; };
+		A833C1422753E2F90044639D /* HistoryButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryButtonTableViewCell.xib; sourceTree = "<group>"; };
 		A846C2552750A3E10075463B /* HistoryManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewModel.swift; sourceTree = "<group>"; };
 		A85301CE274F98B60050FF1C /* HistoryWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWriteViewController.swift; sourceTree = "<group>"; };
 		A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistorySingleWriteView.xib; sourceTree = "<group>"; };
@@ -168,8 +176,6 @@
 		A8C7AB85274E0E2A00B6E0E7 /* String+baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+baseURL.swift"; sourceTree = "<group>"; };
 		A8C7AB88274E0E6C00B6E0E7 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A8C7AB8A274E235A00B6E0E7 /* HistoryManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewController.swift; sourceTree = "<group>"; };
-		A8C7AB94274EBACF00B6E0E7 /* HistoryTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTypeView.xib; sourceTree = "<group>"; };
-		A8C7AB96274EBB0800B6E0E7 /* HistoryTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTypeView.swift; sourceTree = "<group>"; };
 		A8CA17EA273EC267002CA2B9 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		A8CD93312736470100299AB4 /* SignupNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNormalViewController.swift; sourceTree = "<group>"; };
 		A8CD93332736566100299AB4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -366,8 +372,6 @@
 				A8CD93362736702500299AB4 /* SuccessCircleView.swift */,
 				A8CD9338273673C100299AB4 /* SpacingDarkLineView.swift */,
 				A8A6D9F0273CCB5500C84C52 /* BackgroundView.swift */,
-				A8C7AB94274EBACF00B6E0E7 /* HistoryTypeView.xib */,
-				A8C7AB96274EBB0800B6E0E7 /* HistoryTypeView.swift */,
 				A85301D0274F99020050FF1C /* HistorySingleWriteView.xib */,
 				A85301D2274F993C0050FF1C /* HistorySingleWriteView.swift */,
 				A85301D4274FA02E0050FF1C /* HistoryDateWriteView.xib */,
@@ -376,6 +380,10 @@
 				A833C1242751EA460044639D /* HistoryResultView.swift */,
 				A833C126275388530044639D /* HistoryAddButtonView.xib */,
 				A833C128275388870044639D /* HistoryAddButtonView.swift */,
+				A833C1412753E2F90044639D /* HistoryButtonTableViewCell.swift */,
+				A833C1422753E2F90044639D /* HistoryButtonTableViewCell.xib */,
+				A81ED61927575E5500737F3E /* DefaultHeaderView.swift */,
+				A81ED61B27575E6200737F3E /* DefaultHeaderView.xib */,
 			);
 			path = ReuseViews;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				A8CD936027384C4900299AB4 /* SearchTableViewCell.swift */,
+				A81ED615275730A700737F3E /* DefaultTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -627,13 +636,14 @@
 				5E2554362732770B00033723 /* HomeDetailPersonCell.xib in Resources */,
 				5EFB0A462733E36800F39A4D /* TeamSearchCell.xib in Resources */,
 				5EA453912731774100943C94 /* HomeDetailMemberCell.xib in Resources */,
+				A81ED61C27575E6200737F3E /* DefaultHeaderView.xib in Resources */,
 				5EFB0A4B2733EAA300F39A4D /* ChattingCell.xib in Resources */,
+				A833C1442753E2F90044639D /* HistoryButtonTableViewCell.xib in Resources */,
 				B9BF787B27004095000BE0EF /* Main.storyboard in Resources */,
 				A833C1232751EA190044639D /* HistoryResultView.xib in Resources */,
 				5EA453952731775600943C94 /* HomeDetailLeaderCell.xib in Resources */,
 				5EA453992731776900943C94 /* HomeDetailStateCell.xib in Resources */,
 				5E7EFE282732E06F007817C3 /* AlertViewController.xib in Resources */,
-				A8C7AB95274EBAD000B6E0E7 /* HistoryTypeView.xib in Resources */,
 				A85301D1274F99020050FF1C /* HistorySingleWriteView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +717,6 @@
 				A833C1252751EA460044639D /* HistoryResultView.swift in Sources */,
 				A8CD934F2737BD4400299AB4 /* NormalPositionSelect.swift in Sources */,
 				A8CD933E2736A93500299AB4 /* SystemColor.swift in Sources */,
-				A8C7AB97274EBB0800B6E0E7 /* HistoryTypeView.swift in Sources */,
 				A8CD93402736ABD300299AB4 /* LocationSelectView.swift in Sources */,
 				B9D66ECE27147AEA00668490 /* HomeWritingViewController.swift in Sources */,
 				A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */,
@@ -730,6 +739,7 @@
 				5EA453A02731778000943C94 /* HomeDetailMainCell.swift in Sources */,
 				5EFB0A5A27341C1100F39A4D /* ChattingTimeCell.swift in Sources */,
 				B9D66ECC2714716400668490 /* HomeViewController.swift in Sources */,
+				A833C1432753E2F90044639D /* HistoryButtonTableViewCell.swift in Sources */,
 				5EFB0A5627340BF100F39A4D /* ChattingMessageCell.swift in Sources */,
 				B9D66EBB27146E1F00668490 /* MainTabBarCoordinator.swift in Sources */,
 				5EA453AC2731DDA700943C94 /* CALayer+addBorderTop.swift in Sources */,
@@ -753,6 +763,7 @@
 				5EA453692731412A00943C94 /* HomeCell.swift in Sources */,
 				A846C2562750A3E10075463B /* HistoryManagementViewModel.swift in Sources */,
 				A8C7AB89274E0E6C00B6E0E7 /* Login.swift in Sources */,
+				A81ED61A27575E5500737F3E /* DefaultHeaderView.swift in Sources */,
 				A833C12C2753C1E20044639D /* WorkHistory.swift in Sources */,
 				5EFB0A452733E36800F39A4D /* TeamSearchCell.swift in Sources */,
 				B9D66EC82714707000668490 /* MyBudiCoordinator.swift in Sources */,
@@ -767,6 +778,7 @@
 				A8A6D9F9273D2D1800C84C52 /* BackButtonExtension.swift in Sources */,
 				A8CD935C27383CB300299AB4 /* LocationSearchViewController.swift in Sources */,
 				B9D66EC42714703B00668490 /* TeamSearchCoordinator.swift in Sources */,
+				A81ED617275730A700737F3E /* DefaultTableViewCell.swift in Sources */,
 				A85325BB274773F90073FAFB /* SignupNormalViewModel.swift in Sources */,
 				A85301D7274FA03E0050FF1C /* HistoryDateWriteView.swift in Sources */,
 				A8CD933C273676F800299AB4 /* NickNameView.swift in Sources */,

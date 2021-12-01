@@ -15,7 +15,8 @@ final class HistoryManagementViewModel: ViewModel {
     var workHistory: [WorkHistory] = []
     var projectHistory: [ProjectHistory] = []
     var portFolioLink: [String] = []
-
+    var history = [[], [], []]
+    let headerData = ["경력", "프로젝트 이력", "포트폴리오"]
     struct Action {
         var tag = PassthroughSubject<Int, Never>()
         var title = PassthroughSubject<[String], Never>()
@@ -39,6 +40,10 @@ final class HistoryManagementViewModel: ViewModel {
                 self.state.selectIndex.send(tag)
             }
             .store(in: &cancellables)
+    }
+
+    func getHeaderData() -> [String] {
+        return headerData
     }
 
     func addCompany(_ history: WorkHistory) {
