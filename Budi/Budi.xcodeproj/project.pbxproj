@@ -49,6 +49,7 @@
 		A81ED617275730A700737F3E /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81ED615275730A700737F3E /* DefaultTableViewCell.swift */; };
 		A81ED61A27575E5500737F3E /* DefaultHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81ED61927575E5500737F3E /* DefaultHeaderView.swift */; };
 		A81ED61C27575E6200737F3E /* DefaultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A81ED61B27575E6200737F3E /* DefaultHeaderView.xib */; };
+		A81ED61E2757A71400737F3E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81ED61D2757A71400737F3E /* Section.swift */; };
 		A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DC273111C50068218A /* LoginSelectViewController.swift */; };
 		A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DE273111E50068218A /* LoginCoordinator.swift */; };
 		A833C1232751EA190044639D /* HistoryResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A833C1222751EA190044639D /* HistoryResultView.xib */; };
@@ -153,6 +154,7 @@
 		A81ED615275730A700737F3E /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		A81ED61927575E5500737F3E /* DefaultHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHeaderView.swift; sourceTree = "<group>"; };
 		A81ED61B27575E6200737F3E /* DefaultHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultHeaderView.xib; sourceTree = "<group>"; };
+		A81ED61D2757A71400737F3E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		A82E49DC273111C50068218A /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		A82E49DE273111E50068218A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A833C1222751EA190044639D /* HistoryResultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryResultView.xib; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				A8CD93522737F2BF00299AB4 /* PositionData.swift */,
 				A8CD935D273849F800299AB4 /* LocationDummyData.swift */,
 				A85325B42746C4580073FAFB /* NaverData.swift */,
+				A81ED61D2757A71400737F3E /* Section.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				5EA453A02731778000943C94 /* HomeDetailMainCell.swift in Sources */,
 				5EFB0A5A27341C1100F39A4D /* ChattingTimeCell.swift in Sources */,
 				B9D66ECC2714716400668490 /* HomeViewController.swift in Sources */,
+				A81ED61E2757A71400737F3E /* Section.swift in Sources */,
 				A833C1432753E2F90044639D /* HistoryButtonTableViewCell.swift in Sources */,
 				5EFB0A5627340BF100F39A4D /* ChattingMessageCell.swift in Sources */,
 				B9D66EBB27146E1F00668490 /* MainTabBarCoordinator.swift in Sources */,

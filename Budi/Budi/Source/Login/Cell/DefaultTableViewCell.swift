@@ -11,9 +11,14 @@ class DefaultTableViewCell: UITableViewCell {
 
     static let cellId = "DefaultTableViewCell"
 
+    @IBOutlet weak var selectView: UIView!
+    @IBOutlet weak var selectMainTitle: UILabel!
+    @IBOutlet weak var selectDayLabel: UILabel!
+    @IBOutlet weak var selectTeamLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectView.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

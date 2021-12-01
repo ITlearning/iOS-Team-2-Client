@@ -30,7 +30,10 @@ class HistoryWriteViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] tag in
                 self?.currentButtonTag = tag
-                if tag == 2 {
+                if tag == 1 {
+                    self?.firstTypingView.configureText(title: "회사명", placeHolder: "회사명을 입력하세요")
+                    self?.secondTypingView.configureText(title: "부서명/직책", placeHolder: "부서명/직책을 입력하세요")
+                } else if tag == 2 {
                     self?.firstTypingView.configureText(title: "프로젝트명", placeHolder: "프로젝트 이름을 입력하세요")
                     self?.secondTypingView.configureText(title: "직무/역할", placeHolder: "참여한 역할을 입력하세요")
                     self?.datePickerView.checkButtonRemove()

@@ -17,6 +17,11 @@ class HistoryManagementViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressView: ProgressView!
+
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+
     init?(coder: NSCoder, viewModel: HistoryManagementViewModel) {
         self.viewModel = viewModel
         super.init(coder: coder)
@@ -46,7 +51,8 @@ class HistoryManagementViewController: UIViewController {
     @objc
     func buttonAction(_ button: UIButton) {
         print(button.tag)
-        viewModel.history[button.tag].append("hello")
+        viewModel.historyArray[button.tag].append("hello")
+
         tableView.reloadData()
     }
 
@@ -64,16 +70,11 @@ class HistoryManagementViewController: UIViewController {
 extension HistoryManagementViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        viewModel.historyArray.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.history[section].count == 0 {
-            return 1
-        } else {
-            return viewModel.history[section].count
-        }
-
+        return viewModel.historyArray[section].count
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -97,12 +98,12 @@ extension HistoryManagementViewController: UITableViewDelegate, UITableViewDataS
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DefaultTableViewCell.cellId, for: indexPath) as? DefaultTableViewCell else { return UITableViewCell() }
 
-        if indexPath.section == 1 {
+        if indexPath.section == 0 {
+            cell.addButton.setTitle("경력을 추가해보세요", for: .normal)
+        } else if indexPath.section == 1 {
             cell.addButton.setTitle("프로젝트 이력을 추가해보세요", for: .normal)
         } else if indexPath.section == 2 {
-            cell.addButton.setTitle("포트폴리오를 추가해보세요", for: .normal)
-        } else if indexPath.section == 0 {
-            cell.addButton.setTitle("경력을 추가해보세요", for: .normal)
+            cell.addButton.setTitle("포트폴리오를 추가해보세요.", for: .normal)
         }
 
         cell.addButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
@@ -110,5 +111,4 @@ extension HistoryManagementViewController: UITableViewDelegate, UITableViewDataS
 
         return cell
     }
-
 }

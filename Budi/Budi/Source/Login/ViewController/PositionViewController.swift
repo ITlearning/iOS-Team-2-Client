@@ -141,25 +141,6 @@ class PositionViewController: UIViewController {
                 sender.layer.borderColor = UIColor.init(white: 0, alpha: 0.6).cgColor
             })
         }
-    }
-
-    @objc
-    func languageButtonAction(sender: UIButton) {
-        if !sender.isSelected {
-            sender.isSelected = true
-            sender.setTitleColor(UIColor.budiGreen, for: .normal)
-            sender.layer.borderColor = UIColor.budiGreen.cgColor
-            UIView.animate(withDuration: 0.2, animations: {
-                sender.layer.borderWidth = 2
-            })
-        } else {
-            sender.isSelected = false
-            sender.setTitleColor(UIColor.init(white: 0, alpha: 0.6), for: .normal)
-            UIView.animate(withDuration: 0.2, animations: {
-                sender.layer.borderWidth = 0.3
-                sender.layer.borderColor = UIColor.init(white: 0, alpha: 0.6).cgColor
-            })
-        }
         NotificationCenter.default.post(name: NSNotification.Name("NextButtonActivation"), object: nil)
     }
 
@@ -288,22 +269,11 @@ class PositionViewController: UIViewController {
         let detailPosition = PositionData().position
         configureDetailPosition(array: detailPosition, bottomAnchor: detailPositionLabel.bottomAnchor, index: 1)
 
-        scrollView.addSubview(programmingLanguageLabel)
-        programmingLanguageLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            programmingLanguageLabel.topAnchor.constraint(equalTo: detailPositionLabel.bottomAnchor, constant: 116),
-            programmingLanguageLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16)
-        ])
-
-        let programmingLang = PositionData().language
-        configureDetailPosition(array: programmingLang, bottomAnchor: programmingLanguageLabel.bottomAnchor, index: 2)
-
         scrollView.addSubview(spacer)
         spacer.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            spacer.topAnchor.constraint(equalTo: programmingLanguageLabel.bottomAnchor, constant: 116),
+            spacer.topAnchor.constraint(equalTo: detailPositionLabel.bottomAnchor, constant: 116),
             spacer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             spacer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             spacer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20)
@@ -325,8 +295,6 @@ class PositionViewController: UIViewController {
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
             if index == 1 {
                 button.addTarget(self, action: #selector(positionButtionAction), for: .touchUpInside)
-            } else {
-                button.addTarget(self, action: #selector(languageButtonAction), for: .touchUpInside)
             }
             button.tag = num
 

@@ -15,7 +15,7 @@ final class HistoryManagementViewModel: ViewModel {
     var workHistory: [WorkHistory] = []
     var projectHistory: [ProjectHistory] = []
     var portFolioLink: [String] = []
-    var history = [[], [], []]
+    var historyArray = [["hello"], ["hello"], ["hello"]]
     let headerData = ["경력", "프로젝트 이력", "포트폴리오"]
     struct Action {
         var tag = PassthroughSubject<Int, Never>()
@@ -47,6 +47,7 @@ final class HistoryManagementViewModel: ViewModel {
     }
 
     func addCompany(_ history: WorkHistory) {
+        //historyArray[historyArray.endIndex] = history
         workHistory.append(history)
     }
 
