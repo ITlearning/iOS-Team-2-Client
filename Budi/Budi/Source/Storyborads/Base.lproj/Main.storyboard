@@ -426,6 +426,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="cXr-WW-Lng" secondAttribute="bottom" constant="5" id="ldl-L0-mwO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addButton" destination="YJg-AD-AqH" id="7Uy-f4-3fd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

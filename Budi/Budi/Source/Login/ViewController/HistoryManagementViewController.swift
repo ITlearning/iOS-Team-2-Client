@@ -17,7 +17,6 @@ class HistoryManagementViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressView: ProgressView!
-
     init?(coder: NSCoder, viewModel: HistoryManagementViewModel) {
         self.viewModel = viewModel
         super.init(coder: coder)
@@ -49,6 +48,15 @@ class HistoryManagementViewController: UIViewController {
         print(button.tag)
         viewModel.history[button.tag].append("hello")
         tableView.reloadData()
+    }
+
+    @objc
+    func addButtonAction(_ button: UIButton) {
+        if button.tag == 0 {
+            self.coordinator?.showHistoryWriteViewController(1)
+        } else if button.tag == 1 {
+            self.coordinator?.showHistoryWriteViewController(2)
+        }
     }
 
 }
@@ -88,6 +96,18 @@ extension HistoryManagementViewController: UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DefaultTableViewCell.cellId, for: indexPath) as? DefaultTableViewCell else { return UITableViewCell() }
+
+        if indexPath.section == 1 {
+            cell.addButton.setTitle("프로젝트 이력을 추가해보세요", for: .normal)
+        } else if indexPath.section == 2 {
+            cell.addButton.setTitle("포트폴리오를 추가해보세요", for: .normal)
+        } else if indexPath.section == 0 {
+            cell.addButton.setTitle("경력을 추가해보세요", for: .normal)
+        }
+
+        cell.addButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
+        cell.addButton.tag = indexPath.section
+
         return cell
     }
 
