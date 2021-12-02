@@ -51,18 +51,13 @@ class HistoryManagementViewController: UIViewController {
     @objc
     func buttonAction(_ button: UIButton) {
         print(button.tag)
-        viewModel.historyArray[button.tag].append("hello")
-
+        let uuid = UUID()
+        viewModel.historyArray[button.tag].append(uuid)
         tableView.reloadData()
     }
 
     @objc
     func addButtonAction(_ button: UIButton) {
-        if button.tag == 0 {
-            self.coordinator?.showHistoryWriteViewController(1)
-        } else if button.tag == 1 {
-            self.coordinator?.showHistoryWriteViewController(2)
-        }
     }
 
 }
@@ -70,7 +65,7 @@ class HistoryManagementViewController: UIViewController {
 extension HistoryManagementViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.historyArray.count
+        return viewModel.historyArray.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,14 +92,25 @@ extension HistoryManagementViewController: UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DefaultTableViewCell.cellId, for: indexPath) as? DefaultTableViewCell else { return UITableViewCell() }
-
         if indexPath.section == 0 {
             cell.addButton.setTitle("경력을 추가해보세요", for: .normal)
+            cell.addButton.tapPublisher
+                .sink { [weak self] _ in
+                    self?.coordinator?.showHistoryWriteViewController(1)
+                }
+                .store(in: &cell.cancellables)
         } else if indexPath.section == 1 {
             cell.addButton.setTitle("프로젝트 이력을 추가해보세요", for: .normal)
+            cell.addButton.tapPublisher
+                .sink { [weak self] _ in
+                    self?.coordinator?.showHistoryWriteViewController(2)
+                }
+                .store(in: &cell.cancellables)
         } else if indexPath.section == 2 {
             cell.addButton.setTitle("포트폴리오를 추가해보세요.", for: .normal)
         }
+
+        cell.selectView.isHidden = indexPath.section != 0
 
         cell.addButton.addTarget(self, action: #selector(addButtonAction), for: .touchUpInside)
         cell.addButton.tag = indexPath.section

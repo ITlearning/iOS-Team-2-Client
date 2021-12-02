@@ -15,7 +15,7 @@ final class HistoryManagementViewModel: ViewModel {
     var workHistory: [WorkHistory] = []
     var projectHistory: [ProjectHistory] = []
     var portFolioLink: [String] = []
-    var historyArray = [["hello"], ["hello"], ["hello"]]
+    var historyArray = [[UUID()], [UUID()], [UUID()]]
     let headerData = ["경력", "프로젝트 이력", "포트폴리오"]
     struct Action {
         var tag = PassthroughSubject<Int, Never>()

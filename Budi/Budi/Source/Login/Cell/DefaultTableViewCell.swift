@@ -6,17 +6,26 @@
 //
 
 import UIKit
+import Combine
 
-class DefaultTableViewCell: UITableViewCell {
+final class DefaultTableViewCell: UITableViewCell {
 
     static let cellId = "DefaultTableViewCell"
+    var cancellables = Set<AnyCancellable>()
 
     @IBOutlet weak var selectView: UIView!
     @IBOutlet weak var selectMainTitle: UILabel!
     @IBOutlet weak var selectDayLabel: UILabel!
     @IBOutlet weak var selectTeamLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cancellables.removeAll()
+    }
+
     override func awakeFromNib() {
+
         super.awakeFromNib()
         selectView.isHidden = true
     }

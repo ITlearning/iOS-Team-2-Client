@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import Combine
 
-class HistoryButtonTableViewCell: UITableViewCell {
+final class HistoryButtonTableViewCell: UITableViewCell {
+
+    var cancellables = Set<AnyCancellable>()
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cancellables.removeAll()
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

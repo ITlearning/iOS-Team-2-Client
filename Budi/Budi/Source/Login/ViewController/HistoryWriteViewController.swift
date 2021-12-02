@@ -63,7 +63,7 @@ class HistoryWriteViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 if self?.currentButtonTag == 1 {
-                    self?.viewModel.addCompany(WorkHistory(companyName: self?.firstTypingView.singleTextField.text, workTerm: [self?.datePickerView.leftTextField.text ?? "", self?.datePickerView.rightTextField.text ?? ""], department: self?.secondTypingView.singleTextField.text))
+                    self?.viewModel.addCompany(WorkHistory(id: 1, companyName: self?.firstTypingView.singleTextField.text, workTerm: [self?.datePickerView.leftTextField.text ?? "", self?.datePickerView.rightTextField.text ?? ""], department: self?.secondTypingView.singleTextField.text))
                 } else {
                     self?.viewModel.addProject(ProjectHistory(projectName: self?.firstTypingView.singleTextField.text, projectTerm: [self?.datePickerView.leftTextField.text ?? "", self?.datePickerView.rightTextField.text ?? ""], projectDepartment: self?.secondTypingView.singleTextField.text))
                 }
