@@ -72,6 +72,7 @@
 		A81D1084276483060022D610 /* HistoryManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D1083276483060022D610 /* HistoryManagementViewModel.swift */; };
 		A81D1087276485590022D610 /* ProjectHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D1085276485590022D610 /* ProjectHistory.swift */; };
 		A81D1088276485590022D610 /* WorkHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D1086276485590022D610 /* WorkHistory.swift */; };
+		A81D108C2764950F0022D610 /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D108B2764950F0022D610 /* Positions.swift */; };
 		A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DC273111C50068218A /* LoginSelectViewController.swift */; };
 		A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DE273111E50068218A /* LoginCoordinator.swift */; };
 		A85325B52746C4580073FAFB /* NaverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85325B42746C4580073FAFB /* NaverData.swift */; };
@@ -89,8 +90,6 @@
 		A8CD93422736B58E00299AB4 /* IntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93412736B58E00299AB4 /* IntroduceView.swift */; };
 		A8CD93442736E82300299AB4 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93432736E82300299AB4 /* PositionViewController.swift */; };
 		A8CD93472737B9AB00299AB4 /* NormalPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93462737B9AA00299AB4 /* NormalPositionView.swift */; };
-		A8CD934F2737BD4400299AB4 /* NormalPositionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD934E2737BD4400299AB4 /* NormalPositionSelectView.swift */; };
-		A8CD93532737F2BF00299AB4 /* PositionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD93522737F2BF00299AB4 /* PositionData.swift */; };
 		A8CD935C27383CB300299AB4 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD935B27383CB300299AB4 /* LocationSearchViewController.swift */; };
 		A8CD935E273849F800299AB4 /* LocationDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD935D273849F800299AB4 /* LocationDummyData.swift */; };
 		A8CD936127384C4900299AB4 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD936027384C4900299AB4 /* SearchTableViewCell.swift */; };
@@ -180,6 +179,7 @@
 		A81D1083276483060022D610 /* HistoryManagementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryManagementViewModel.swift; sourceTree = "<group>"; };
 		A81D1085276485590022D610 /* ProjectHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectHistory.swift; sourceTree = "<group>"; };
 		A81D1086276485590022D610 /* WorkHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkHistory.swift; sourceTree = "<group>"; };
+		A81D108B2764950F0022D610 /* Positions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
 		A82E49DC273111C50068218A /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		A82E49DE273111E50068218A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A85325B42746C4580073FAFB /* NaverData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverData.swift; sourceTree = "<group>"; };
@@ -198,8 +198,6 @@
 		A8CD93412736B58E00299AB4 /* IntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceView.swift; sourceTree = "<group>"; };
 		A8CD93432736E82300299AB4 /* PositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 		A8CD93462737B9AA00299AB4 /* NormalPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalPositionView.swift; sourceTree = "<group>"; };
-		A8CD934E2737BD4400299AB4 /* NormalPositionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalPositionSelectView.swift; sourceTree = "<group>"; };
-		A8CD93522737F2BF00299AB4 /* PositionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionData.swift; sourceTree = "<group>"; };
 		A8CD935B27383CB300299AB4 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		A8CD935D273849F800299AB4 /* LocationDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDummyData.swift; sourceTree = "<group>"; };
 		A8CD936027384C4900299AB4 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -425,7 +423,6 @@
 				A8CD933F2736ABD300299AB4 /* LocationSelectView.swift */,
 				A8CD93412736B58E00299AB4 /* IntroduceView.swift */,
 				A8CD93462737B9AA00299AB4 /* NormalPositionView.swift */,
-				A8CD934E2737BD4400299AB4 /* NormalPositionSelectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,7 +431,6 @@
 			isa = PBXGroup;
 			children = (
 				A81D1062276482B70022D610 /* Section.swift */,
-				A8CD93522737F2BF00299AB4 /* PositionData.swift */,
 				A8CD935D273849F800299AB4 /* LocationDummyData.swift */,
 				A85325B42746C4580073FAFB /* NaverData.swift */,
 			);
@@ -466,6 +462,7 @@
 				B92D5504274C03AA00D0E851 /* Post.swift */,
 				B94DCA7F27521626006A9E0D /* Login.swift */,
 				B94DCA8227521648006A9E0D /* APIResponse.swift */,
+				A81D108B2764950F0022D610 /* Positions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -784,7 +781,6 @@
 				5E24072527522CB500954BE7 /* HomeViewController.swift in Sources */,
 				A81D1087276485590022D610 /* ProjectHistory.swift in Sources */,
 				5E24072427522CA800954BE7 /* MainTabBarCoordinator.swift in Sources */,
-				A8CD934F2737BD4400299AB4 /* NormalPositionSelectView.swift in Sources */,
 				A8CD933E2736A93500299AB4 /* UIColor.swift in Sources */,
 				A81D107A276482F90022D610 /* HistoryResultView.swift in Sources */,
 				A8CD93402736ABD300299AB4 /* LocationSelectView.swift in Sources */,
@@ -797,6 +793,7 @@
 				A8CA17EB273EC267002CA2B9 /* UIResponder.swift in Sources */,
 				A8CD936127384C4900299AB4 /* SearchTableViewCell.swift in Sources */,
 				B92D5505274C03AB00D0E851 /* Post.swift in Sources */,
+				A81D108C2764950F0022D610 /* Positions.swift in Sources */,
 				A8A6D9F1273CCB5500C84C52 /* BackgroundView.swift in Sources */,
 				A8CD93422736B58E00299AB4 /* IntroduceView.swift in Sources */,
 				A8CD935E273849F800299AB4 /* LocationDummyData.swift in Sources */,
@@ -844,7 +841,6 @@
 				B9D66EC42714703B00668490 /* TeamSearchCoordinator.swift in Sources */,
 				A85325BB274773F90073FAFB /* SignupNormalViewModel.swift in Sources */,
 				A8CD933C273676F800299AB4 /* NickNameView.swift in Sources */,
-				A8CD93532737F2BF00299AB4 /* PositionData.swift in Sources */,
 				5E24071D275225A600954BE7 /* BudiTarget.swift in Sources */,
 				A8CD93372736702500299AB4 /* SuccessCircleView.swift in Sources */,
 				5EA453902731774100943C94 /* HomeDetailMemberCell.swift in Sources */,

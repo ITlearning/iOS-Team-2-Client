@@ -11,6 +11,7 @@ import CombineCocoa
 
 class PositionViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
+    private let viewModel: SignupNormalViewModel
     private let alertView = AlertView()
     private var cancellables = Set<AnyCancellable>()
     override func viewDidLayoutSubviews() {
@@ -100,6 +101,15 @@ class PositionViewController: UIViewController {
         return space
     }()
 
+    init?(coder: NSCoder, viewModel: SignupNormalViewModel) {
+        self.viewModel = viewModel
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -108,9 +118,8 @@ class PositionViewController: UIViewController {
         self.addBackButton()
         configureLayout()
         bindButton()
+        bindViewModel()
     }
-
-
 
     private func bindButton() {
         alertView.doneButton.tapPublisher
@@ -118,6 +127,43 @@ class PositionViewController: UIViewController {
             .sink { _ in
 
                 self.coordinator?.showHistoryManagementViewController()
+            }
+            .store(in: &cancellables)
+
+        normalPositionView.productManagerButton
+            .tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.viewModel.action.positionFetch.send(Position.productManager)
+            }
+            .store(in: &cancellables)
+
+        normalPositionView.developerButton
+            .tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                print("\(Position.developer)")
+                self?.viewModel.action.positionFetch.send(Position.developer)
+            }
+            .store(in: &cancellables)
+
+        normalPositionView.designerButton
+            .tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                print("\(Position.designer)")
+                self?.viewModel.action.positionFetch.send(Position.designer)
+            }
+            .store(in: &cancellables)
+
+    }
+
+    private func bindViewModel() {
+        viewModel.state.positionData
+            .receive(on: DispatchQueue.main)
+            .sink { positionData in
+                guard let data = positionData else { return }
+                print(data)
             }
             .store(in: &cancellables)
     }
@@ -265,8 +311,6 @@ class PositionViewController: UIViewController {
             detailPositionLabel.topAnchor.constraint(equalTo: normalPositionView.bottomAnchor),
             detailPositionLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16)
         ])
-        let detailPosition = PositionData().position
-        configureDetailPosition(array: detailPosition, bottomAnchor: detailPositionLabel.bottomAnchor, index: 1)
 
         scrollView.addSubview(spacer)
         spacer.translatesAutoresizingMaskIntoConstraints = false
@@ -277,45 +321,5 @@ class PositionViewController: UIViewController {
             spacer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             spacer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20)
         ])
-    }
-
-    private func configureDetailPosition(array: [String], bottomAnchor: NSLayoutYAxisAnchor, index: Int) {
-        var startX: CGFloat = 16
-        var startXTwo: CGFloat = 16
-        for num in 0...array.count-1 {
-
-            let button = UIButton()
-            button.layer.borderWidth = 0.3
-            button.layer.borderColor = UIColor.init(white: 0.2, alpha: 0.4).cgColor
-            button.layer.cornerRadius = 5
-            button.setTitle(array[num], for: .normal)
-            button.setTitleColor(UIColor.black, for: .normal)
-            button.setTitleColor(UIColor.init(white: 0, alpha: 0.6), for: .normal)
-            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
-            if index == 1 {
-                button.addTarget(self, action: #selector(positionButtionAction), for: .touchUpInside)
-            }
-            button.tag = num
-
-            if num < 4 {
-                scrollView.addSubview(button)
-
-                button.translatesAutoresizingMaskIntoConstraints = false
-                button.topAnchor.constraint(equalTo: bottomAnchor, constant: 12).isActive = true
-                button.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: startX).isActive = true
-                button.widthAnchor.constraint(equalToConstant: button.intrinsicContentSize.width + 25).isActive = true
-                button.heightAnchor.constraint(equalToConstant: 33).isActive = true
-                startX += button.intrinsicContentSize.width + 33
-            } else {
-                scrollView.addSubview(button)
-
-                button.translatesAutoresizingMaskIntoConstraints = false
-                button.topAnchor.constraint(equalTo: bottomAnchor, constant: 53).isActive = true
-                button.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: startXTwo).isActive = true
-                button.widthAnchor.constraint(equalToConstant: button.intrinsicContentSize.width + 25).isActive = true
-                button.heightAnchor.constraint(equalToConstant: 33).isActive = true
-                startXTwo += button.intrinsicContentSize.width + 33
-            }
-        }
     }
 }

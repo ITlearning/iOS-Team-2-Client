@@ -9,6 +9,7 @@ import UIKit
 
 final class LoginCoordinator: NavigationCoordinator {
     private let historyViewModel = HistoryManagementViewModel()
+    private let viewModel = SignupNormalViewModel()
     weak var navigationController: UINavigationController?
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
@@ -51,7 +52,9 @@ extension LoginCoordinator {
     }
 
     func showPositionViewController() {
-        let viewController: PositionViewController = storyboard.instantiateViewController(identifier: PositionViewController.identifier)
+        let viewController: PositionViewController = storyboard.instantiateViewController(identifier: PositionViewController.identifier) { coder -> PositionViewController? in
+            return PositionViewController(coder: coder, viewModel: self.viewModel)
+        }
         viewController.navigationItem.title = "회원가입"
         viewController.coordinator = self
         navigationController?.pushViewController(viewController, animated: true)
