@@ -73,10 +73,11 @@
 		A81D1087276485590022D610 /* ProjectHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D1085276485590022D610 /* ProjectHistory.swift */; };
 		A81D1088276485590022D610 /* WorkHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D1086276485590022D610 /* WorkHistory.swift */; };
 		A81D108C2764950F0022D610 /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D108B2764950F0022D610 /* Positions.swift */; };
+		A81D10CC2765174E0022D610 /* PositionDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D10CB2765174E0022D610 /* PositionDetailCollectionViewCell.swift */; };
 		A82E49DD273111C50068218A /* LoginSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DC273111C50068218A /* LoginSelectViewController.swift */; };
 		A82E49DF273111E50068218A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E49DE273111E50068218A /* LoginCoordinator.swift */; };
 		A85325B52746C4580073FAFB /* NaverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85325B42746C4580073FAFB /* NaverData.swift */; };
-		A85325BB274773F90073FAFB /* SignupNormalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85325BA274773F90073FAFB /* SignupNormalViewModel.swift */; };
+		A85325BB274773F90073FAFB /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85325BA274773F90073FAFB /* SignupViewModel.swift */; };
 		A8A6D9F1273CCB5500C84C52 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6D9F0273CCB5500C84C52 /* BackgroundView.swift */; };
 		A8A6D9F9273D2D1800C84C52 /* BackButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6D9F8273D2D1800C84C52 /* BackButtonExtension.swift */; };
 		A8CA17EB273EC267002CA2B9 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA17EA273EC267002CA2B9 /* UIResponder.swift */; };
@@ -180,10 +181,11 @@
 		A81D1085276485590022D610 /* ProjectHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectHistory.swift; sourceTree = "<group>"; };
 		A81D1086276485590022D610 /* WorkHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkHistory.swift; sourceTree = "<group>"; };
 		A81D108B2764950F0022D610 /* Positions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
+		A81D10CB2765174E0022D610 /* PositionDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		A82E49DC273111C50068218A /* LoginSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectViewController.swift; sourceTree = "<group>"; };
 		A82E49DE273111E50068218A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A85325B42746C4580073FAFB /* NaverData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverData.swift; sourceTree = "<group>"; };
-		A85325BA274773F90073FAFB /* SignupNormalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNormalViewModel.swift; sourceTree = "<group>"; };
+		A85325BA274773F90073FAFB /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		A8A6D9F0273CCB5500C84C52 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		A8A6D9F8273D2D1800C84C52 /* BackButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonExtension.swift; sourceTree = "<group>"; };
 		A8C7AB88274E0E6C00B6E0E7 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -384,7 +386,7 @@
 		A85325B92747739A0073FAFB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A85325BA274773F90073FAFB /* SignupNormalViewModel.swift */,
+				A85325BA274773F90073FAFB /* SignupViewModel.swift */,
 				A81D1083276483060022D610 /* HistoryManagementViewModel.swift */,
 			);
 			path = ViewModel;
@@ -442,6 +444,7 @@
 			children = (
 				A81D1060276482950022D610 /* DefaultTableViewCell.swift */,
 				A8CD936027384C4900299AB4 /* SearchTableViewCell.swift */,
+				A81D10CB2765174E0022D610 /* PositionDetailCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				5EFB0A5627340BF100F39A4D /* ChattingMessageCell.swift in Sources */,
 				5EA453AC2731DDA700943C94 /* CALayer+addBorderTop.swift in Sources */,
 				5EFB0A4D2733EABF00F39A4D /* ChattingViewController.swift in Sources */,
+				A81D10CC2765174E0022D610 /* PositionDetailCollectionViewCell.swift in Sources */,
 				5EA4539C2731777500943C94 /* HomeDetailDescriptionCell.swift in Sources */,
 				5E2554382732AD0800033723 /* UIView+IBInspectable.swift in Sources */,
 				5EA453982731776900943C94 /* HomeDetailStatusCell.swift in Sources */,
@@ -839,7 +843,7 @@
 				5E240721275225CD00954BE7 /* String+date.swift in Sources */,
 				A8CD935C27383CB300299AB4 /* LocationSearchViewController.swift in Sources */,
 				B9D66EC42714703B00668490 /* TeamSearchCoordinator.swift in Sources */,
-				A85325BB274773F90073FAFB /* SignupNormalViewModel.swift in Sources */,
+				A85325BB274773F90073FAFB /* SignupViewModel.swift in Sources */,
 				A8CD933C273676F800299AB4 /* NickNameView.swift in Sources */,
 				5E24071D275225A600954BE7 /* BudiTarget.swift in Sources */,
 				A8CD93372736702500299AB4 /* SuccessCircleView.swift in Sources */,

@@ -11,7 +11,7 @@ import Combine
 class SignupNormalViewController: UIViewController {
 
     weak var coordinator: LoginCoordinator?
-    private var viewModel = SignupNormalViewModel()
+    private var viewModel = SignupViewModel()
     private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLayoutSubviews() {

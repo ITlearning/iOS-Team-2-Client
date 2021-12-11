@@ -9,7 +9,7 @@ import UIKit
 
 final class LoginCoordinator: NavigationCoordinator {
     private let historyViewModel = HistoryManagementViewModel()
-    private let viewModel = SignupNormalViewModel()
+    private let viewModel = SignupViewModel()
     weak var navigationController: UINavigationController?
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
 

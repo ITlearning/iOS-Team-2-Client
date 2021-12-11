@@ -10,7 +10,7 @@ import Combine
 import NaverThirdPartyLogin
 import Moya
 
-final class SignupNormalViewModel: ViewModel {
+final class SignupViewModel: ViewModel {
     struct Action {
         let fetch = PassthroughSubject<Void, Never>()
         let positionFetch = PassthroughSubject<Position, Never>()
@@ -48,8 +48,8 @@ final class SignupNormalViewModel: ViewModel {
                         print(completion)
                         self?.state.positionData.send(nil)
                         print(error.localizedDescription)
-                    }, receiveValue: { [weak self] post in
-                        self?.state.positionData.send(post)
+                    }, receiveValue: { post in
+                        self.state.positionData.send(post)
                     })
                     .store(in: &self.cancellables)
             }).store(in: &cancellables)

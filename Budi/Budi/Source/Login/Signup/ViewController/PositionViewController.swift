@@ -11,7 +11,7 @@ import CombineCocoa
 
 class PositionViewController: UIViewController {
     weak var coordinator: LoginCoordinator?
-    private let viewModel: SignupNormalViewModel
+    private let viewModel: SignupViewModel
     private let alertView = AlertView()
     private var cancellables = Set<AnyCancellable>()
     override func viewDidLayoutSubviews() {
@@ -65,6 +65,12 @@ class PositionViewController: UIViewController {
         return scrollView
     }()
 
+    private let positionDetailCollectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        return collectionView
+    }()
+
     private let normalPositionView = NormalPositionView()
     private let spacingDarkView = SpacingDarkLineView()
 
@@ -101,7 +107,7 @@ class PositionViewController: UIViewController {
         return space
     }()
 
-    init?(coder: NSCoder, viewModel: SignupNormalViewModel) {
+    init?(coder: NSCoder, viewModel: SignupViewModel) {
         self.viewModel = viewModel
         super.init(coder: coder)
     }
@@ -119,6 +125,7 @@ class PositionViewController: UIViewController {
         configureLayout()
         bindButton()
         bindViewModel()
+        configureCollectionView()
     }
 
     private func bindButton() {
@@ -164,6 +171,8 @@ class PositionViewController: UIViewController {
             .sink { positionData in
                 guard let data = positionData else { return }
                 print(data)
+                print(self.viewModel.state.positionData.value?.count)
+                self.positionDetailCollectionView.reloadData()
             }
             .store(in: &cancellables)
     }
@@ -212,6 +221,16 @@ class PositionViewController: UIViewController {
             self.alertView.alpha = 0.0
         }, completion: nil)
 
+    }
+
+    private func configureCollectionView() {
+        positionDetailCollectionView.register(PositionDetailCollectionViewCell.self, forCellWithReuseIdentifier: PositionDetailCollectionViewCell.cellId)
+        let flow = UICollectionViewFlowLayout()
+        flow.itemSize = CGSize(width: 50, height: 32)
+        positionDetailCollectionView.delegate = self
+        positionDetailCollectionView.showsVerticalScrollIndicator = false
+        positionDetailCollectionView.dataSource = self
+        positionDetailCollectionView.collectionViewLayout = flow
     }
 
     private func configureAlert() {
@@ -312,14 +331,39 @@ class PositionViewController: UIViewController {
             detailPositionLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16)
         ])
 
-        scrollView.addSubview(spacer)
-        spacer.translatesAutoresizingMaskIntoConstraints = false
-
+        scrollView.addSubview(positionDetailCollectionView)
+        positionDetailCollectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            spacer.topAnchor.constraint(equalTo: detailPositionLabel.bottomAnchor, constant: 116),
-            spacer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            spacer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            spacer.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20)
+            positionDetailCollectionView.topAnchor.constraint(equalTo: detailPositionLabel.bottomAnchor, constant: 16),
+            positionDetailCollectionView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            positionDetailCollectionView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            positionDetailCollectionView.heightAnchor.constraint(equalToConstant: 150)
         ])
+    }
+}
+
+extension PositionViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let data = viewModel.state.positionData.value?.count else { return 0 }
+        return data
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PositionDetailCollectionViewCell.cellId, for: indexPath) as? PositionDetailCollectionViewCell else { return .zero }
+        guard let text = viewModel.state.positionData.value?[indexPath.row] else { return CGSize() }
+        cell.configureButtonText(text)
+        cell.positionDetailButton.sizeToFit()
+        let cellWidth = cell.positionDetailButton.frame.width
+        return CGSize(width: cellWidth + 5, height: 32)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PositionDetailCollectionViewCell.cellId, for: indexPath) as? PositionDetailCollectionViewCell else { return UICollectionViewCell() }
+        guard let text = viewModel.state.positionData.value?[indexPath.row] else { return UICollectionViewCell() }
+        cell.backgroundColor = UIColor.budiGray
+        cell.configureButtonText(text)
+
+        return cell
+
     }
 }
